@@ -10,7 +10,7 @@ namespace Formulario_Cadastro_Pessoa.Models
         [StringLength(150)]
         public string Nome { get; set; }
         [Required]
-        [StringLength (100)]
+        [StringLength (50)]
         public string NomePai { get; set;}
     }
 }
