@@ -54,7 +54,7 @@ namespace Formulario_Cadastro_Pessoa.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome")] Cliente cliente)
+        public async Task<IActionResult> Create([Bind("Id,NomeCompleto,DataNascimento,RG,CPF,Logradouro,Bairro,Cidade,Complemento,UF,CEP,EstadoCivil,NomePai,NomeMae")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace Formulario_Cadastro_Pessoa.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome")] Cliente cliente)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,NomeCompleto,DataNascimento,RG,CPF,Logradouro,Bairro,Cidade,Complemento,UF,CEP,EstadoCivil,NomePai,NomeMae")] Cliente cliente)
         {
             if (id != cliente.Id)
             {

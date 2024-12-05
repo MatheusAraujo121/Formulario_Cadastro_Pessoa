@@ -2,7 +2,13 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="d-flex align-items-center justify-content-center vh-100">
+    <div class="text-center">
+        <h1 class="display-4 text-white">Bem-vindo ao CAD_Clientes</h1>
+        <p class="text-white">Aqui você pode gerenciar seus clientes de forma simples e eficiente. Utilize as opções abaixo para criar novos cadastros ou visualizar a lista de clientes já cadastrados.</p>
+        <div class="mt-4">
+            <a href="@Url.Action("Create", "Clientes")" class="btn btn-light btn-lg mx-2">Criar Cliente</a>
+            <a href="@Url.Action("Index", "Clientes")" class="btn btn-dark btn-lg mx-2">Listar Clientes</a>
+        </div>
+    </div>
 </div>

@@ -13,8 +13,7 @@ namespace Formulario_Cadastro_Pessoa.Models
         public required string NomeCompleto { get; set; }
 
         [Required(ErrorMessage = "A data de nascimento é obrigatória.")]
-        [Range(typeof(DateTime), "1/1/1900", "1/1/2004", ErrorMessage = "A data de nascimento deve ser válida (não pode ser posterior a 1º de janeiro de 2004).")]
-        public DateTime DataNascimento { get; set; }
+        public required DateTime DataNascimento { get; set; }
 
         [Required(ErrorMessage = "O RG é obrigatório.")]
         [StringLength(20, ErrorMessage = "O RG deve ter no máximo 20 caracteres.")]
@@ -39,7 +38,7 @@ namespace Formulario_Cadastro_Pessoa.Models
         public required string Cidade { get; set; }
 
         [StringLength(100, ErrorMessage = "O complemento deve ter no máximo 100 caracteres.")]
-        public required string Complemento { get; set; }
+        public string? Complemento { get; set; }
 
         [Required(ErrorMessage = "A UF é obrigatória.")]
         [StringLength(2, MinimumLength = 2, ErrorMessage = "A UF deve ter exatamente 2 caracteres.")]
