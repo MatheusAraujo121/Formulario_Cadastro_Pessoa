@@ -104,3 +104,149 @@ body {
         font-size: 0.9rem; /* Ajuste de tamanho da fonte para telas pequenas */
     }
 }
+/* Estilizando a barra de rolagem */
+.table-responsive {
+    overflow-x: auto;
+}
+
+    .table-responsive::-webkit-scrollbar {
+        height: 8px; /* Altura da barra de rolagem */
+    }
+
+    .table-responsive::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.5); /* Cor do "thumb" da barra de rolagem */
+        border-radius: 10px; /* Bordas arredondadas */
+    }
+
+        .table-responsive::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.8); /* Cor do "thumb" ao passar o mouse */
+        }
+
+    .table-responsive::- webkit-scrollbar-track {
+        background: transparent; /* Fundo da área da barra de rolagem */
+    }
+/* Cor do texto da tabela */
+.table th, .table td {
+    color: white; /* Cor do texto das células da tabela */
+}
+/* Estilo para os botões de ação */
+.action-button {
+    width: 40px; /* Largura fixa para os botões de ação */
+    height: 40px; /* Altura fixa para os botões de ação */
+    display: flex; /* Para centralizar o ícone */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-bottom: 5px; /* Espaçamento entre os botões */
+}
+
+    /* Tamanho dos ícones */
+    .action-button i {
+        font-size: 20px; /* Tamanho fixo para os ícones */
+    }
+/* Estilo para garantir responsividade */
+.form-row {
+    margin-bottom: 15px; /* Espaçamento entre as linhas do formulário */
+}
+
+.btn-primary {
+    width: 100%; /* Botão ocupa 100% da largura */
+}
+
+.btn-secondary {
+    margin-top: 10px; /* Espaçamento acima do botão de voltar */
+}
+
+@media (max-width: 768px) {
+    .col-md-6 {
+        width: 100%; /* Colunas ocupam 100% em telas menores */
+    }
+}
+h1 {
+    margin-bottom: 20px;
+}
+
+h4 {
+    margin-bottom: 15px;
+}
+
+.container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-group {
+    margin-top: 20px;
+}
+
+.btn-warning {
+    background-color: #ffc107; /* Cor do botão de edição */
+    border-color: #ffc 107; /* Borda do botão de edição */
+}
+
+    .btn-warning:hover {
+        background-color: #e0a800; /* Cor do botão de edição ao passar o mouse */
+        border-color: #d39e00; /* Borda do botão de edição ao passar o mouse */
+    }
+
+.btn-secondary {
+    background-color: #6c757d; /* Cor do botão de voltar */
+    border-color: #6c757d; /* Borda do botão de voltar */
+}
+
+    .btn-secondary:hover {
+        background-color: #5a6268; /* Cor do botão de voltar ao passar o mouse */
+        border-color: #545b62; /* Borda do botão de voltar ao passar o mouse */
+    }
+/* Estilo personalizado para a página de exclusão */
+h1 {
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-bottom: 15px color: #dc3545; /* Cor vermelha para o aviso de exclusão */
+}
+
+h4 {
+    margin-bottom: 15px;
+}
+
+.container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+.btn-danger {
+    background-color: #8B0000; /* Cor do botão de exclusão */
+    color: white; /* Cor do texto branco */
+    border: none; /* Sem borda */
+}
+
+    .btn-danger:hover {
+        background-color: #c82333; /* Cor de fundo vermelha escura ao passar o mouse */
+        color: white; /* Cor do texto permanece branco */
+    }
+
+.btn-gray {
+    background-color: #6c757d; /* Cor de fundo cinza */
+    color: white; /* Cor do texto branco */
+    border: none; /* Sem borda */
+}
+
+    .btn-gray:hover {
+        background-color: #5a6268; /* Cor de fundo cinza escuro ao passar o mouse */
+        color: white; /* Cor do texto permanece branco */
+    }
+.btn-white {
+    background-color: #6c757d; /* Cor de fundo cinza */
+    color: white; /* Cor do texto branco */
+    border: none; /* Sem borda */
+}
+
+    .btn-white:hover {
+        background-color: #5a6268; /* Cor de fundo cinza escuro ao passar o mouse */
+        color: white; /* Cor do texto permanece branco */
+    }

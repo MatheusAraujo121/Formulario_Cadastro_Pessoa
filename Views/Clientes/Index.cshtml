@@ -5,104 +5,65 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Clientes cadastrados</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-secondary btn-lg rounded-pill" asp-action="Create" title="Create New">Cadastrar novo cliente</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.NomeCompleto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataNascimento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RG)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CPF)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Logradouro)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Bairro)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cidade)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Complemento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UF)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CEP)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EstadoCivil)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NomePai)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NomeMae)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.NomeCompleto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataNascimento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RG)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CPF)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Logradouro)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Bairro)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cidade)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Complemento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UF)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CEP)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EstadoCivil)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NomePai)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NomeMae)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+<div class="table-responsive">
+    <table class="table table-striped table-bordered" style="background: linear-gradient(to bottom, #333, #666); color: white;">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.NomeCompleto)</th>
+                <th>@Html.DisplayNameFor(model => model.DataNascimento)</th>
+                <th>@Html.DisplayNameFor(model => model.RG)</th>
+                <th>@Html.DisplayNameFor(model => model.CPF)</th>
+                <th>@Html.DisplayNameFor(model => model.Logradouro)</th>
+                <th>@Html.DisplayNameFor(model => model.Bairro)</th>
+                <th>@Html.DisplayNameFor(model => model.Cidade)</th>
+                <th>@Html.DisplayNameFor(model => model.Complemento)</th>
+                <th>@Html.DisplayNameFor(model => model.UF)</th>
+                <th>@Html.DisplayNameFor(model => model.CEP)</th>
+                <th>@Html.DisplayNameFor(model => model.EstadoCivil)</th>
+                <th>@Html.DisplayNameFor(model => model.NomePai)</th>
+                <th>@Html.DisplayNameFor(model => model.NomeMae)</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.NomeCompleto)</td>
+                    <td>@Html.DisplayFor(modelItem => item.DataNascimento)</td>
+                    <td>@Html.DisplayFor(modelItem => item.RG)</td>
+                    <td>@Html.DisplayFor(modelItem => item.CPF)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Logradouro)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Bairro)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Cidade)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Complemento)</td>
+                    <td>@Html.DisplayFor(modelItem => item.UF)</td>
+                    <td>@Html.DisplayFor(modelItem => item.CEP)</td>
+                    <td>@Html.DisplayFor(modelItem => item.EstadoCivil)</td>
+                    <td>@Html.DisplayFor(modelItem => item.NomePai)</td>
+                    <td>@Html.DisplayFor(modelItem => item.NomeMae)</td>
+                    <td>
+                        <a class="btn btn-light btn-sm rounded-circle me-2 action-button" asp-action="Edit" asp-route-id="@item.Id" title="Edit">
+                            <i class="bi bi-pencil"></i>
+                        </a>
+                        <a class="btn btn-secondary btn-sm rounded-circle me-2 action-button" asp-action="Details" asp-route-id="@item.Id" title="Details">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <a class="btn" style="background-color: #8B0000; color: white; border-radius: 50%;" asp-action="Delete" asp-route-id="@item.Id" title="Delete">
+                            <i class="bi bi-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Adicione o CSS para os ícones do Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
