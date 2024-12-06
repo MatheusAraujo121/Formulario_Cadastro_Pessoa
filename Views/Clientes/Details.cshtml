@@ -10,93 +10,110 @@
 <div class="container">
     <h4>Cliente</h4>
     <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.NomeCompleto)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.NomeCompleto)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.DataNascimento)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.DataNascimento)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.RG)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.RG)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.CPF)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.CPF)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Logradouro)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Logradouro)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Bairro)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Bairro)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Cidade)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Cidade)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Complemento)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Complemento)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.UF)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.UF)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.CEP)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.CEP)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.EstadoCivil)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.EstadoCivil)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.NomePai)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.NomePai)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.NomeMae)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.NomeMae)
-        </dd>
-    </dl>
+
+    <!-- Grupo de Nomes -->
+    <h5>Informações Pessoais:</h5>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="info-box">
+                <strong>Nome completo:</strong>
+                <p>@Html.DisplayFor(model => model.NomeCompleto)</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="info-box">
+                <strong>Nome da Mãe:</strong>
+                <p>@Html.DisplayFor(model => model.NomeMae)</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="info-box">
+                <strong>Nome do Pai:</strong>
+                <p>@Html.DisplayFor(model => model.NomePai)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Grupo de Documentos -->
+    <h5>Documentos:</h5>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="info-box">
+                <strong>RG:</strong>
+                <p>@Html.DisplayFor(model => model.RG)</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="info-box">
+                <strong>CPF:</strong>
+                <p>@Html.DisplayFor(model => model.CPF)</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="info-box">
+                <strong>Data de Nascimento:</strong>
+                <p>@Model.DataNascimento.ToString("dd/MM/yyyy")</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Grupo de Endereço -->
+    <h5>Endereço:</h5>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="info-box">
+                <strong>CEP:</strong>
+                <p>@Html.DisplayFor(model => model.CEP)</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="info-box">
+                <strong>Cidade:</strong>
+                <p>@Html.DisplayFor(model => model.Cidade)</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="info-box">
+                <strong>Bairro:</strong>
+                <p>@Html.DisplayFor(model => model.Bairro)</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="info-box">
+                <strong>Logradouro:</strong>
+                <p>@Html.DisplayFor(model => model.Logradouro)</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="info-box">
+                <strong>UF:</strong>
+                <p>@Html.DisplayFor(model => model.UF)</p>
+            </div>
+        </div>
+        
+        <div class="col-sm-4">
+            <div class="info-box">
+                <strong>Complemento:</strong>
+                <p>@Html.DisplayFor(model => model.Complemento)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Grupo de Estado Civil -->
+    <h5>Estado Civil:</h5>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="info-box">
+                <strong>Estado Civil:</strong>
+                <p>@Html.DisplayFor(model => model.EstadoCivil)</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="container">
-
-    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-light">Edit</a> |
-        <a asp-action="Index" class="btn btn-gray">Back to List</a>
-
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-light">Editar</a> |
+    <a asp-action="Index" asp-route-id="@Model?.Id" class="btn btn-gray">Voltar para lista</a>
 </div>
 
 @section Scripts {
